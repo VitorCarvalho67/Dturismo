@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-p:rgb(74, 0, 109);
+    --color-s: rgb(255, 140, 0) ;
+    --color-1: rgba(0, 0, 0, 0.781);
+    --color-2: rgba(255, 255, 255, 0.74);
+    
+    --font-p: 'Sulphur Point', sans-serif;
+    --font-s: 'Raleway', sans-serif;;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--color-2);
+    z-index: 1;
+}
+
+footer{
+    background-color: var(--color-1);
+    height: 100px;
+    width: 100vw;
+    margin-top: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li{
+    margin-left: 20px;
+}
+
+main{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    background-color: #155f0eb6;
+    background-image: url(../img/La-Torre-Eiffel-Pairs_lugares-de-paris-francia.jpg);
+    background-size: cover;
+    background-position: center center;
+    align-items: top;
+    justify-content: right;
+}
+
+main h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-p);
+    padding: 20px;
+    font-size: 30px;
+    letter-spacing: 1cm;
+    font-weight: 900;
+    border-bottom: solid 1px var(--color-p);
+    backdrop-filter: blur(5px);
+}
+
+aside{
+    position: fixed;
+    height: 100vh;
+    width: 10px;
+    background-color: var(--color-p);
+    font-size: 20px;
+    z-index: 2;
+}
+
+aside ul{
+    display: none;
+}
+
+aside ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-s);
+    cursor: pointer;
+}
+
+aside:hover ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
+aside:hover{
+    animation: abrir 1s ease-out;
+    width: 333px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(74, 0, 109, 0.418);
+}
+
+
+@keyframes abrir {
+    0%{
+        width: 3vw;
+    }
+
+    100%{
+        width: 333px;
+    }
+}
+
+section{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100vw;
+    background-color: rgb(255, 232, 249);
+}
+
+.title1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-p);
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+    letter-spacing: 2px;
+    color: var(--color-s);
+}
+.cards-1,.cards-2,.cards-3,.cards-4{
+    height: 300px;
+    width: 250px;
+    background-color: rgba(85, 107, 47, 0.719);
+    margin: 0px 30px 0px 30px;
+    cursor: pointer;
+    display: flex;
+}
+
+.cards-1{
+    background-image: url(../img/Punta-Cana-768x512.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-2{
+    background-image: url(../img/Cancún-768x576.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-3{
+    background-image: url(../img/Curaçao-768x512.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-4{
+    background-image: url(../img/Aruba-768x575.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards:hover{
+    border: dotted 2px rgb(78, 5, 72);
+}
+.cards-1:hover .text,.cards-2:hover .text,.cards-3:hover .text,.cards-4:hover .text{
+    display: block;
+    backdrop-filter: blur(5px);
+    height: 100%;
+}
+
+.text{
+    display: none;
+    padding: 10px;
+    color: #fff;
+    font-family: var(--font-p);
+    letter-spacing: 2px;
+    transition-delay: 1s;
+}
+
+.text h1{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.descontos{
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 30px;
+}
+.img-box{
+    color: green;
+}
+.pd{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.pd-1,.pd-2,.pd-3{
+    padding: 10PX;
+    border-radius: 10px;
+    border: solid 3px rgb(54, 32, 32);
+    backdrop-filter: blur(5px);
+    color: rgba(54, 32, 32, 0.63);
+    max-width: 600px;
+    width: 80%;
+    margin-top: 20px;
+    height: 180px;
+    font-family: var(--font-s);
+}
+.pd-1{
+    background-image: url(../img/melhores-pequenas-cidades-da-holanda.jpg);
+    background-size: cover;
+    object-fit:cover;
+    background-position: center center;
+}
+.pd-2{
+    background-image: url(../img/cidades-da-inglaterra-1.jpg);
+    background-size: cover;
+    object-fit:cover;
+    background-position: center center;
+}
+.pd-3{
+    background-image: url(../img/cidades-bonitas-frança-7.jpg);
+    background-size: cover;
+    object-fit:cover;
+    background-position: top center;
+}
+
+.ps{
+    background-color: aqua;
+    width: 50%;
+    background-image: url(../img/Coupons-5895f8f63df78caebcd02f1b.jpg);
+    background-size:cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1000px){
+    section{
+        grid-template-columns: 50% 50%;
+        height: auto;
+    }
+    .ps{
+        display: none;
+    }
+    .pd{
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:700px){
+    
+    main{
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+    main h1{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        border-bottom: rgb(0, 0, 0) solid 1px;
+    }
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        margin: 20px 20px 20px 20px;
+    }
+    .title1{
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        height: 200px;
+        width: 200px;
+    }
+    
+}
