@@ -8,12 +8,14 @@
 }
 
 :root {
-    --color-p:rgb(74, 0, 109);
+    --color-a:rgba(255, 102, 0, 0.658);
+    --color-s:rgb(255, 136, 0);
+    --color-p:rgb(255, 94, 0);
     --color-1: rgba(0, 0, 0, 0.781);
     --color-2: rgba(255, 255, 255, 0.74);
-    --color-3: rgb(255, 140, 0) ;
+    --color-3: rgb(255, 115, 0) ;
     --font-p: 'Sulphur Point', sans-serif;
-    --font-s: 'Raleway', sans-serif;;
+    --font-s: 'Raleway', sans-serif;
 }
 
 body{
@@ -94,4 +96,13 @@ aside:hover{
     100%{
         width: 333px;
     }
+}
+
+
+@media screen and (max-width:700px){
+       
+}
+
+@media screen and (max-width:500px){
+    
 }

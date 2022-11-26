@@ -6,22 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dia Turismo</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/2.png" type="image/x-icon">
 </head>
 <body>
-    <aside>
+    <aside id="anside" class="fechado">
      <ul>
-         <li>Lugares</li>
-         <li>Descontos</li>
-         <li>Preços</li>
+         <li><a href="../lugares/lugares.html">Lugares</a></li>
+         <li><a href="../pacotes/pacotes.html">Pacotes</a></li>
+         <li><a href="../preço/preço.html">Preços</a></li>
      </ul>
     </aside>
+    <nav>
+        <div class="logo-nav">
+            <h2>DTurismo</h2>
+        </div>
+        <div class="pesquisa-nav">
+            <input type="text" id="inp">
+            <button id="pbtn"><img src="img/lupa.png" alt=""></button>
+        </div>
+        <div class="btn-nav">
+            <button id="btnl"><img src="img/cardapio.png" alt=""></button>
+        </div>
+    </nav>
     <main>
         <div class="content_main">
             <h1>DTurismo</h1>
         </div>
     </main>
     <h1 class="title1">Top 4 lugares do Caribe para BR</h1>
-    <section>
+    <section class="cards-box">
         
         <div class="cards-1">
             <div class="text">
@@ -52,9 +65,21 @@
         </div>
 
     </section>
-    <div class="descontos">
-        <div class="pd">
+    <div class="OS">
+        <div>
+            <h1>Inscreva-se para receber ofertas exclusivas!</h1>
+        </div>
+        <div class="dados">
+            <input type="text" placeholder="Nome" name="Nome" id="Nome" text>
+            <input type="email" placeholder="Escreva seu e-mail" name="email" id="email" text>
+            <input type="submit" id="btn1" value="Enviar" btn>
+        </div>
+    </div>
 
+    <section class="descontos">
+        <div class="pd">
+            <div id="mapa">
+            </div>
         <div class="pd-1" >
             <div class="img-box">
                 15%
@@ -87,11 +112,22 @@
     </div>
     <div class="ps">
     </div>
-    </div>
+    </section>
+    
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?AIzaSyBkD3NxyUkjK9HR5EZhwAMuq9QQtFmUVxM&callback=inicializar">
+</script>
+    
+
     <footer>
         <ul>
-            <li>jhblkfsjdf iajhdwidwaidh</li>
-            <li>jhblkfsjdf iajhdwidwaidh</li>
+            <li>Vitor Eduardo Silva de Carvalho</li>
+            <li>Daniel Rocha Alvarenga</li>
+        </ul>
+        <ul>
+            <li>2022</li>
+            <li>PW - 4º BIMESTRE</li>
         </ul>
     </footer>
 </body>

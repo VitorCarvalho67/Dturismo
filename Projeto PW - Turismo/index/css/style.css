@@ -8,11 +8,12 @@
 }
 
 :root {
-    --color-p:rgb(74, 0, 109);
-    --color-s: rgb(255, 140, 0) ;
+    --color-a:rgba(255, 102, 0, 0.658);
+    --color-s:rgb(255, 136, 0);
+    --color-p:rgb(255, 94, 0);
     --color-1: rgba(0, 0, 0, 0.781);
     --color-2: rgba(255, 255, 255, 0.74);
-    
+    --color-3: rgb(255, 115, 0) ;
     --font-p: 'Sulphur Point', sans-serif;
     --font-s: 'Raleway', sans-serif;;
 }
@@ -32,26 +33,97 @@ footer{
     margin-top: 10px;
     color: #fff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
 footer ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: left;
 }
 
 footer ul li{
     margin-left: 20px;
 }
 
+nav{
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    grid-template-areas: "logo pesquisa btn";
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(to left,rgb(255, 94, 0), rgb(255, 123, 0));
+}
+
+.logo-nav{
+    grid-area: "logo";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-2);
+    font-family: var(--font-p);
+    letter-spacing: 3px;
+}
+
+.pesquisa-nav{
+    grid-area: "pesquisa";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa-nav input{
+    height: 30px;
+    width: 200px;
+}
+
+.pesquisa-nav button{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: solid 1px var(--color-p);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;   
+}
+
+.pesquisa-nav button img{
+    height: 100%;
+}
+
+.btn-nav button{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: solid 1px var(--color-p);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;   
+}
+
+.btn-nav button img{
+    height: 100%;
+}
+.btn-nav{
+    grid-area: "btn";
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
 main{
     height: 70vh;
     width: 100vw;
     display: flex;
-    background-color: #155f0eb6;
-    background-image: url(../img/La-Torre-Eiffel-Pairs_lugares-de-paris-francia.jpg);
+    background-color: #5f2e0eb6;
+    background-image: url(../img/ian-dooley-DuBNA1QMpPA-unsplash.jpg);
     background-size: cover;
     background-position: center center;
     align-items: top;
@@ -78,6 +150,13 @@ aside{
     z-index: 2;
 }
 
+.aberto{
+    animation: abrir 1s ease-out;
+    width: 333px;
+    backdrop-filter: blur(5px);
+    background-color: var(--color-a);
+}
+
 aside ul{
     display: none;
 }
@@ -86,12 +165,25 @@ aside ul li{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+aside ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     font-family: var(--font-s);
     cursor: pointer;
+    text-decoration: none;
 }
 
 aside:hover ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
+.aberto ul{
     display: grid;
     grid-template-rows: 33vh 33vh 33vh;
     grid-template-areas: "x" "y" "z";
@@ -101,7 +193,7 @@ aside:hover{
     animation: abrir 1s ease-out;
     width: 333px;
     backdrop-filter: blur(5px);
-    background-color: rgba(74, 0, 109, 0.418);
+    background-color: var(--color-a);
 }
 
 
@@ -115,14 +207,14 @@ aside:hover{
     }
 }
 
-section{
+.cards-box{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-content: center;
     align-items: center;
     height: 350px;
     width: 100vw;
-    background-color: rgb(255, 232, 249);
+    background-color: rgb(255, 243, 232);
 }
 
 .title1{
@@ -138,7 +230,7 @@ section{
 .cards-1,.cards-2,.cards-3,.cards-4{
     height: 300px;
     width: 250px;
-    background-color: rgba(85, 107, 47, 0.719);
+    background-color: rgba(107, 76, 47, 0.719);
     margin: 0px 30px 0px 30px;
     cursor: pointer;
     display: flex;
@@ -148,6 +240,7 @@ section{
     background-image: url(../img/Punta-Cana-768x512.jpg);
     background-size: cover;
     background-position: center center;
+    border: wave 3px black;
 }
 .cards-2{
     background-image: url(../img/Cancún-768x576.jpg);
@@ -165,7 +258,7 @@ section{
     background-position: center center;
 }
 .cards:hover{
-    border: dotted 2px rgb(78, 5, 72);
+    border: dotted 2px rgb(78, 32, 5);
 }
 .cards-1:hover .text,.cards-2:hover .text,.cards-3:hover .text,.cards-4:hover .text{
     display: block;
@@ -185,6 +278,57 @@ section{
 .text h1{
     margin-bottom: 10px;
     font-weight: 600;
+}
+
+.OS{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 100vw;
+    background-color: rgb(255 124 0);
+    margin-bottom: 10px;
+    border: dashed 5px white;
+    padding: 10px;
+    color: #fff;
+    font-family: var(--font-p);
+    overflow: hidden;
+}
+.OS div{
+    overflow: hidden;
+    text-align: center;
+}
+
+.dados{
+    height: 80px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dados input[text]{
+    height: 40px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    padding-left: 5px;
+    outline: none;
+}
+
+.dados input[btn]{
+    height: 40px;
+    width: 50px;
+    border: #fff solid 2px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .descontos{
@@ -243,9 +387,16 @@ section{
     background-position: center;
     object-fit: cover;
 }
+#mapa{
+    width: 100%;
+    height: 300px;
+}
 
+#mapa script{
+    height: 100%;
+}
 @media screen and (max-width:1000px){
-    section{
+    .cards-box{
         grid-template-columns: 50% 50%;
         height: auto;
     }
@@ -260,7 +411,14 @@ section{
 }
 
 @media screen and (max-width:700px){
-    
+    nav{
+        grid-template-columns: 30% 50% 20%;
+    }
+
+    .btn-nav{
+        justify-content: center;
+    }
+
     main{
         justify-content: center;
         align-items: center;
@@ -277,6 +435,26 @@ section{
     .title1{
         font-size: 18px;
     }
+    .OS {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .OS div h1{
+        font-size: 18px;
+    }
+    .dados{
+        padding: 5px;
+        flex-direction: column;
+        height: 100%;
+    }
+    .dados input{
+        transform: scale(.91);
+    }
+    .dados input[text]{
+        margin-bottom: 2px;
+    }
+    
     
 }
 
@@ -285,5 +463,6 @@ section{
         height: 200px;
         width: 200px;
     }
-    
+    .OS div h1{
+    }
 }
