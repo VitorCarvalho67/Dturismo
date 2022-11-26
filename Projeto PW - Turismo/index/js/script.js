@@ -31,7 +31,7 @@ Email = document.getElementById("email").value;
     }
 })
 
-function inicializar() {
+
     var coordenadas = {lat: -22.912869, lng: -43.228963};
 
     var mapa = new google.maps.Map(document.getElementById('mapa'), {
@@ -44,31 +44,30 @@ function inicializar() {
       map: mapa,
       title: 'Meu marcador'
     });
-}
 
-var pesquisa = document.getElementById("inp").value;
-pb = document.getElementById("pbtn");
+// var pesquisa = document.getElementById("inp").value;
+// pb = document.getElementById("pbtn");
 
-pb.addEventListener("click", () =>{
+// pb.addEventListener("click", () =>{
     
     
-    if(pesquisa.indexOf("lugares")){
-        console.log("oi");
-        href(/lugares/lugares.html);
-    }
-    if(pesquisa.contains("pacotes")){
-        ../pacotes/pacotes.html
-    }
-    if(pesquisa.contains("preço")){
-        ../preço/preço.html
-    }
-    if(pesquisa.contains("mapa")){
-        ../index/index.html/mapa
-    }
-    if(pesquisa.contains("lugares")){
-        ../index/index.html/cupons
-    }
+//     if(pesquisa.indexOf("lugares")){
+//         console.log("oi");
+//         href(/lugares/lugares.html);
+//     }
+//     if(pesquisa.contains("pacotes")){
+//         ../pacotes/pacotes.html
+//     }
+//     if(pesquisa.contains("preço")){
+//         ../preço/preço.html
+//     }
+//     if(pesquisa.contains("mapa")){
+//         ../index/index.html/mapa
+//     }
+//     if(pesquisa.contains("lugares")){
+//         ../index/index.html/cupons
+//     }
 
-})
+// })
     
 
