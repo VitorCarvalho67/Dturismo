@@ -1,5 +1,48 @@
 volt = document.getElementById("reset");
 next = document.getElementById("next");
+var input = document.querySelector("#inp");
+var btnn = document.querySelector("#pbtn");
+
+blb = document.getElementById("btnl");
+
+input.addEventListener("keypress", function(e){
+    
+    if (e.key === "Enter"){
+
+        var result = input.value;
+
+        if(result.includes("lugares") || result.include("Lugares") || result.include("locais") || result.include("Locais") || result.include("Pontos") || result.include("pontos")){
+        location.href = "../lugares/lugares.html";
+    }
+    }
+    
+    
+})
+
+btnn.addEventListener("click", () =>{
+    
+        var result = input.value;
+
+        if(result.includes("lugares") || result.include("Lugares") || result.include("locais") || result.include("Locais") || result.include("Pontos") || result.include("pontos")){
+        location.href = "../lugares/lugares.html";
+    
+    }
+    
+    
+})
+
+blb.addEventListener("click", () =>{
+    
+    if(anside.classList.contains("fechado")){
+        anside.classList.add("aberto");
+        anside.classList.remove("fechado");
+    }
+    else if(anside.classList.contains("aberto")){
+        anside.classList.add("fechado");
+        anside.classList.remove("aberto");
+    }
+})
+
 
 next.addEventListener("click", () =>{
 

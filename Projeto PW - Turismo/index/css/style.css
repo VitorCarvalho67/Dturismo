@@ -77,14 +77,18 @@ nav{
 .pesquisa-nav input{
     height: 30px;
     width: 200px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
 }
 
 .pesquisa-nav button{
-    height: 30px;
-    width: 30px;
+    height: 32px;
+    width: 32px;
     background-color: #fff;
     border: solid 1px var(--color-p);
-    border-radius: 5px;
+    border-radius: 0px 10px 10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
