@@ -1,6 +1,34 @@
 blb = document.getElementById("btnl");
 BTN = document.getElementById("btn1");
 bl = document.getElementById("anside");
+var input = document.querySelector("#inp");
+var btnn = document.querySelector("#pbtn");
+
+input.addEventListener("keypress", function(e){
+    
+    if (e.key === "Enter"){
+
+        var result = input.value;
+
+        if(result.includes("lugares") || result.include("Lugares") || result.include("locais") || result.include("Locais") || result.include("Pontos") || result.include("pontos")){
+        location.href = "../lugares/lugares.html";
+    }
+    }
+    
+    
+})
+
+btnn.addEventListener("click", () =>{
+    
+        var result = input.value;
+
+        if(result.includes("lugares") || result.include("Lugares") || result.include("locais") || result.include("Locais") || result.include("Pontos") || result.include("pontos")){
+        location.href = "../lugares/lugares.html";
+    
+    }
+    
+    
+})
 
 blb.addEventListener("click", () =>{
     
@@ -44,30 +72,3 @@ Email = document.getElementById("email").value;
       map: mapa,
       title: 'Meu marcador'
     });
-
-// var pesquisa = document.getElementById("inp").value;
-// pb = document.getElementById("pbtn");
-
-// pb.addEventListener("click", () =>{
-    
-    
-//     if(pesquisa.indexOf("lugares")){
-//         console.log("oi");
-//         href(/lugares/lugares.html);
-//     }
-//     if(pesquisa.contains("pacotes")){
-//         ../pacotes/pacotes.html
-//     }
-//     if(pesquisa.contains("preço")){
-//         ../preço/preço.html
-//     }
-//     if(pesquisa.contains("mapa")){
-//         ../index/index.html/mapa
-//     }
-//     if(pesquisa.contains("lugares")){
-//         ../index/index.html/cupons
-//     }
-
-// })
-    
-
