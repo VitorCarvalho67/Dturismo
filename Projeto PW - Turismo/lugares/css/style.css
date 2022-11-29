@@ -14,7 +14,6 @@
     --color-1: rgba(0, 0, 0, 0.781);
     --color-2: rgba(255, 255, 255, 0.74);
     --color-3: rgb(255, 115, 0) ;
-    
     --font-p: 'Sulphur Point', sans-serif;
     --font-s: 'Raleway', sans-serif;;
 }
@@ -34,29 +33,120 @@ footer{
     margin-top: 10px;
     color: #fff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
 footer ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: left;
 }
 
 footer ul li{
     margin-left: 20px;
 }
 
+nav{
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    grid-template-areas: "logo pesquisa btn";
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(to left,rgb(255, 94, 0), rgb(255, 123, 0));
+}
+
+.logo-nav{
+    grid-area: "logo";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-2);
+    font-family: var(--font-p);
+    letter-spacing: 3px;
+}
+
+.pesquisa-nav{
+    grid-area: "pesquisa";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa-nav input{
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+}
+
+.pesquisa-nav button{
+    height: 32px;
+    width: 32px;
+    background-color: #fff;
+    border: solid 1px var(--color-p);
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;   
+}
+
+.pesquisa-nav button img{
+    height: 100%;
+}
+
+.btn-nav button{
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: solid 1px var(--color-p);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;   
+}
+
+.btn-nav button img{
+    height: 100%;
+}
+.btn-nav{
+    grid-area: "btn";
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+@keyframes abrir {
+    0%{
+        width: 3vw;
+    }
+
+    100%{
+        width: 333px;
+    }
+}
+
+.slide{
+    display: flex;
+    flex-direction: row;
+}
 
 aside{
     position: fixed;
     height: 100vh;
-    width: 10px;
+    width: 0px;
     background-color: var(--color-p);
     font-size: 20px;
-    z-index: 4;
+    z-index: 2;
 }
+
 
 aside ul{
     display: none;
@@ -84,6 +174,12 @@ aside:hover ul{
     grid-template-areas: "x" "y" "z";
 }
 
+.aberto ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
 aside:hover{
     animation: abrir 1s ease-out;
     width: 333px;
@@ -102,10 +198,14 @@ aside:hover{
     }
 }
 
-.slide{
-    display: flex;
-    flex-direction: row;
+
+.aberto{
+    animation: abrir 1s ease-out;
+    width: 333px;
+    backdrop-filter: blur(5px);
+    background-color: var(--color-a);
 }
+
 main{
     height: 80vh;
     width: 100vw;
