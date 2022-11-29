@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-a:rgba(255, 102, 0, 0.658);
+    --color-s:rgb(255, 136, 0);
+    --color-p:rgb(255, 94, 0);
+    --color-1: rgba(0, 0, 0, 0.781);
+    --color-2: rgba(255, 255, 255, 0.74);
+    --color-3: rgb(255, 115, 0) ;
+    --font-p: 'Sulphur Point', sans-serif;
+    --font-s: 'Raleway', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--color-2);
+}
+
+footer{
+    background-color: var(--color-1);
+    height: 100px;
+    width: 100vw;
+    margin-top: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li{
+    margin-left: 20px;
+}
+
+aside{
+    position: fixed;
+    height: 100vh;
+    width: 10px;
+    background-color: var(--color-p);
+    font-size: 20px;
+}
+
+aside ul{
+    display: none;
+}
+
+aside ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-s);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+aside:hover ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
+aside:hover{
+    animation: abrir ease-out;
+    width: 333px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(74, 0, 109, 0.418);
+}
+
+
+@keyframes abrir {
+    0%{
+        width: 3vw;
+    }
+
+    100%{
+        width: 333px;
+    }
+}
+
+
+@media screen and (max-width:700px){
+       
+}
+
+@media screen and (max-width:500px){
+    
+}

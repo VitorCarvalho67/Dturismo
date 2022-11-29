@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-p:rgb(74, 0, 109);
+    --color-1: rgba(0, 0, 0, 0.781);
+    --color-2: rgba(255, 255, 255, 0.74);
+    --color-3: rgb(255, 140, 0) ;
+    --font-p: 'Sulphur Point', sans-serif;
+    --font-s: 'Raleway', sans-serif;;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    background-color: var(--color-2);
+}
+
+footer{
+    background-color: var(--color-1);
+    height: 100px;
+    width: 100vw;
+    margin-top: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+}
+
+footer ul li{
+    margin-left: 20px;
+}
+
+main{
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    background-color: #155f0eb6;
+    background-image: url(../img/mexico-3840x2160-5k-4k-wallpaper-cancun-the-caribbean-shore-sky-6472-37434343.jpg);
+    background-size: cover;
+    background-position: center center;
+    align-items: top;
+    justify-content: right;
+}
+
+main h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-3);
+    padding: 20px;
+    font-size: 30px;
+    letter-spacing: 1cm;
+    font-weight: 900;
+    border-bottom: solid 1px var(--color-3);
+}
+
+aside{
+    position: fixed;
+    height: 100vh;
+    width: 10px;
+    background-color: var(--color-p);
+    font-size: 20px;
+}
+
+aside ul{
+    display: none;
+}
+
+aside ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-s);
+    cursor: pointer;
+}
+
+aside:hover ul{
+    display: grid;
+    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-areas: "x" "y" "z";
+}
+
+aside:hover{
+    animation: abrir ease-out;
+    width: 333px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(74, 0, 109, 0.418);
+}
+
+
+@keyframes abrir {
+    0%{
+        width: 3vw;
+    }
+
+    100%{
+        width: 333px;
+    }
+}
+
+section{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100vw;
+    background-color: rgb(255, 232, 249);
+}
+
+.title1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-p);
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+    letter-spacing: 2px;
+    color: var(--color-3);
+}
+.cards-1,.cards-2,.cards-3,.cards-4{
+    height: 300px;
+    width: 250px;
+    background-color: rgba(85, 107, 47, 0.719);
+    margin: 0px 30px 0px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-1{
+    background-image: url(../img/Punta-Cana-768x512.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-2{
+    background-image: url(../img/Cancún-768x576.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-3{
+    background-image: url(../img/Curaçao-768x512.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards-4{
+    background-image: url(../img/Aruba-768x575.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.cards:hover{
+    border: dotted 2px rgb(78, 5, 72);
+}
+.cards-1:hover .text,.cards-2:hover .text,.cards-3:hover .text,.cards-4:hover .text{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    height: 100%;
+}
+
+.text{
+    display: none;
+    padding: 10px;
+    color: #fff;
+    font-family: var(--font-p);
+    letter-spacing: 2px;
+}
+
+.text h1{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.descontos{
+    background-color: #fff;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pd{
+    padding: 10PX;
+    border-radius: 10px;
+    background-color: var(--color-3);
+    color: #fff;  
+    border-bottom: solid 4px var(--color-p);  
+    width: 80vw;
+    margin-top: 20px;
+    height: 180px;
+    font-family: var(--font-s);
+}
+
+@media screen and (max-width:1000px){
+    section{
+        grid-template-columns: 50% 50%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:700px){
+    
+    main{
+        justify-content: center;
+        height: 50vh;
+    }
+    main h1{
+        font-size: 20px;
+    }
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        margin: 20px 20px 20px 20px;
+    }
+    .title1{
+        font-size: 18px;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+    .cards-1,.cards-2,.cards-3,.cards-4{
+        height: 200px;
+        width: 200px;
+    }
+    
+}
